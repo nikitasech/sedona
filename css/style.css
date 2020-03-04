@@ -1,0 +1,94 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "PT Sans", Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+
+    background-color: #f2f2f2;
+}
+
+.container {
+    padding: 0 72px;
+}
+
+.link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.back {
+    width: 1200px;
+    margin: 0 auto;
+
+    background-color: #ffffff;
+    box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
+}
+
+.header {
+    position: relative;
+}
+
+.header__logo {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 70px);
+
+    display: block;
+    margin: 0 auto;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    background-color: #ffffff;
+}
+
+.nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 530px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__item {
+    min-width: 239px;
+    max-width: 275px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 18px;
+    box-sizing: border-box;
+
+    list-style: none;
+}
+
+.nav__list:first-child > .nav__item {
+    justify-content: flex-start;
+    padding-left: 72px;
+}
+
+.nav__list:last-child > .nav__item {
+    justify-content: flex-end;
+    padding-right: 72px;
+}
+
+.nav__link {
+    font-weight: 700;
+}
+
+.welcome {
+    height: 508px;
+
+    font-size: 0;
+
+    background:
+        url("../img/decorative/welcome.svg") 50% 75px / 459px 353px no-repeat,
+        url("../img/decorative/background-photo.jpg") no-repeat;
+}

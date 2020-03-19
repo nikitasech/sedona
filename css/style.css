@@ -459,6 +459,16 @@ body {
     transition: opacity 0.15s ease-in-out;
 }
 
+.form__label_checkbox:hover,
+.form__label_radio:hover {
+    opacity: 1;
+}
+
+.form__input_checkbox:focus + .form__label_checkbox,
+.form__input_radio:focus + .form__label_radio {
+    opacity: 1;
+}
+
 .form__input_checkbox + .form__label::before {
     position: absolute;
     top: 0;

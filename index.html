@@ -31,15 +31,18 @@
                 </nav>
             </header>
             <main class="main">
-                <h1 class="welcome">Добро пожаловать в великолепный город "Седона"</h1>
+                <section class="welcome">
+                    <h1 class="welcome__title">Cедона</h1>
+                    <img src="img/decorative/welcome.svg" alt="Добро пожаловать в великолепный город Седона" width="459" height="353" class="welcome__image">
+                </section>
                 <section class="about">
                     <h2 class="visually-hidden">О городке</h2>
                     <p class="about__text">
                         Седона — небольшой городок в Аризоне, заслуживающий большего!
                     </p>
-                    <h2 class="about__subtitle">
+                    <p class="about__subtitle">
                         Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
-                    </h2>
+                    </p>
                     <ul class="about__list advantages">
                         <li class="advantages__item">
                             <div class="advantages__explanation">
@@ -116,10 +119,10 @@
                     </p>
                     <div class="hotels__search">
                         <button class="hotels__button" type="button">Поиск гостиницы в Седоне</button>
-                        <form action="https://echo.htmlacademy.ru" class="hotels__modal modal form">
+                        <form action="https://echo.htmlacademy.ru" method="post" class="hotels__modal modal form">
                             <p class="form__paragraph">
-                                <label class="form__label">Дата заезда:</label>
-                                <input type="text" value="24 апреля 2017" class="form__field form__field_date">
+                                <label for="form_date-of-arrival" class="form__label">Дата заезда:</label>
+                                <input type="text" value="24 апреля 2017" name="date-of-arrival" id="form_date-of-arrival" class="form__field form__field_date">
                                 <button type="button" class="form__button_calendar">
                                     Календарь
                                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="#a9a9a9">
@@ -129,8 +132,8 @@
                                 </button>
                             </p>
                             <p class="form__paragraph">
-                                <label class="form__label">Дата выезда:</label>
-                                <input type="text" value="4 июля 2017" class="form__field form__field_date">
+                                <label for="form_date-of-departure" class="form__label">Дата выезда:</label>
+                                <input type="text" value="4 июля 2017" name="date-of-departure" id="form_date-of-departure" class="form__field form__field_date">
                                 <button type="button" class="form__button_calendar">
                                     Календарь
                                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="#a9a9a9">
@@ -139,29 +142,32 @@
                                     </svg>
                                 </button>
                             </p>
-                            <p class="form__paragraph form__paragraph_counter">
-                                <label for="number-adult" class="form__label">Взрослые:</label>
-                                <span class="form__number-container">
+                            <div class="form__paragraph form__paragraph_counter">
+                                <label for="number-adult" class="form__label">
+                                    Взрослые:
+                                </label>
+                                <div class="form__number-container">
                                     <button type="button" class="form__button form__button_quantity form__button_minus">
                                         Меньше
                                     </button>
-                                    <input type="number" value="2" id="number-adult" class="form__field form__field_number">
+                                    <input type="number" value="2" id="number-adult" name="number-of-adults" class="form__field form__field_number">
                                     <button type="button" class="form__button form__button_quantity form__button_plus">
                                         Больше
-
                                     </button>
-                                </span>
-                                <label for="number-children" class="form__label">Дети:</label>
-                                    <span class="form__number-container">
-                                        <button type="button" class="form__button form__button_quantity form__button_minus">
-                                            Меньше
-                                        </button>
-                                        <input type="number" value="0" id="number-children" class="form__field form__field_number">
-                                        <button type="button" class="form__button form__button_quantity form__button_plus">
-                                            Больше
-                                        </button>
-                                    </span>
-                            </p>
+                                </div>
+                                <label for="number-children" class="form__label">
+                                    Дети:
+                                </label>
+                                <div class="form__number-container">
+                                    <button type="button" class="form__button form__button_quantity form__button_minus">
+                                        Меньше
+                                    </button>
+                                    <input type="number" value="0" id="number-children" name="number-of-children" class="form__field form__field_number">
+                                    <button type="button" class="form__button form__button_quantity form__button_plus">
+                                        Больше
+                                    </button>
+                                </div>
+                            </div>
                             <input type="submit" value="Найти" class="form__button form__button_submit">
                         </form>
                     </div>

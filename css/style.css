@@ -762,6 +762,15 @@ body {
     font-weight: 700;
 }
 
+.nav__link_selected,
+.nav__link_selected:hover,
+.nav__link_selected:focus,
+.nav__link_selected:active {
+    color: #766357;
+
+    cursor: pointer;
+}
+
 .main {
     text-align: center;
 }
@@ -1115,6 +1124,8 @@ body {
 }
 
 .sort__list_type .sort__link:active {
+    border: none;
+
     color: #000000;
 }
 
@@ -1264,6 +1275,8 @@ body {
     vertical-align: middle;
     padding: 4px 13px;
     margin: 0;
+
+    color: #666666;
 
     background-color: #f2f2f2;
 }

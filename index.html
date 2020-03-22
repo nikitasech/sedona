@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/normalize-min.css">
+        <link rel="stylesheet" href="css/style-min.css">
         <title>HTML Academy: Седона</title>
     </head>
     <body>
@@ -111,18 +111,21 @@
                     </ul>
                 </section>
                 <section class="hotels">
-                    <h2 class="visually-hidden">Поиск гостиницы</h2>
-                    <p class="hotels__title">Заинтересовались?</p>
-                    <p class="hotels__text">
-                        Укажите предполагаемые даты поездки,<br>
-                        и мы покажем вам лучшие предложения гостиниц в седоне
-                    </p>
-                    <div class="hotels__search">
+                    <div class="hotels__container">
+                        <h2 class="visually-hidden">Поиск гостиницы</h2>
+                        <p class="hotels__title">Заинтересовались?</p>
+                        <p class="hotels__text">
+                            Укажите предполагаемые даты поездки,<br>
+                            и мы покажем вам лучшие предложения гостиниц в седоне
+                        </p>
                         <button class="hotels__button" type="button">Поиск гостиницы в Седоне</button>
-                        <form action="https://echo.htmlacademy.ru" method="post" class="hotels__modal modal form">
+                    </div>
+                    <div class="hotels__search">
+                        <!-- action="https://echo.htmlacademy.ru" -->
+                        <form method="post" class="hotels__modal modal form">
                             <p class="form__paragraph">
                                 <label for="form_date-of-arrival" class="form__label">Дата заезда:</label>
-                                <input type="text" value="24 апреля 2017" name="date-of-arrival" id="form_date-of-arrival" class="form__field form__field_date">
+                                <input type="text" placeholder="24 апреля 2017" name="date-of-arrival" id="form_date-of-arrival" class="form__field form__field_date">
                                 <button type="button" class="form__button_calendar">
                                     Календарь
                                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="#a9a9a9">
@@ -133,7 +136,7 @@
                             </p>
                             <p class="form__paragraph">
                                 <label for="form_date-of-departure" class="form__label">Дата выезда:</label>
-                                <input type="text" value="4 июля 2017" name="date-of-departure" id="form_date-of-departure" class="form__field form__field_date">
+                                <input type="text" placeholder="4 июля 2017" name="date-of-departure" id="form_date-of-departure" class="form__field form__field_date">
                                 <button type="button" class="form__button_calendar">
                                     Календарь
                                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="#a9a9a9">
@@ -146,7 +149,7 @@
                                 <label for="number-adult" class="form__label">
                                     Взрослые:
                                 </label>
-                                <div class="form__number-container">
+                                <div class="form__number-container form__number-container_abult">
                                     <button type="button" class="form__button form__button_quantity form__button_minus">
                                         Меньше
                                     </button>
@@ -158,7 +161,7 @@
                                 <label for="number-children" class="form__label">
                                     Дети:
                                 </label>
-                                <div class="form__number-container">
+                                <div class="form__number-container form__number-container_children">
                                     <button type="button" class="form__button form__button_quantity form__button_minus">
                                         Меньше
                                     </button>
@@ -220,5 +223,6 @@
                 </p>
             </footer>
         </div>
+        <script src="js/script-min.js"></script>
     </body>
 </html>
